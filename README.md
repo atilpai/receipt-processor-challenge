@@ -3,6 +3,7 @@ Pull down repo
 
 Simple run instructions:
 - Go to root project folder where Dockerfile resides
+- Make sure your Docker daemon is running
 - Docker build run instructions:
     -  `docker build -t receipt-processor-challenge .`
     -  `docker run --rm -p 8080:8080 receipt-processor-challenge`
