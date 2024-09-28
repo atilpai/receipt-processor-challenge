@@ -9,6 +9,7 @@ Simple run instructions:
     -  `docker run --rm -p 8080:8080 receipt-processor-challenge`
  
 Sample calls:
+
 curl --location --request POST 'http://localhost:8080/receipts/process' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -37,3 +38,6 @@ curl --location --request POST 'http://localhost:8080/receipts/process' \
 }'
 
 curl --location --request GET 'http://0.0.0.0:8080/receipts/Target_1727562079_3fe47fce-59dc-486e-baac-08d258bc0023/points'
+
+
+PS: I would delete the `.idea` folder if you are running project on some other IDE (not IntelliJ)
