@@ -40,9 +40,9 @@ object Main {
     bindingFuture.onComplete {
       case Success(binding) =>
         val address = binding.localAddress
-        logger info (s"Server online at http://${address.getHostString}:${address.getPort}/")
+        logger info s"Server online at http://${address.getHostString}:${address.getPort}/"
         CoordinatedShutdown(system).addTask(CoordinatedShutdown.PhaseBeforeServiceUnbind, "check-shutdown-reason") { () =>
-          println("CoordinatedShutdown triggered with reason: " + CoordinatedShutdown(system).shutdownReason())
+          logger info ("CoordinatedShutdown triggered with reason: " + CoordinatedShutdown(system).shutdownReason())
           Future.successful(Done)
         }
 
